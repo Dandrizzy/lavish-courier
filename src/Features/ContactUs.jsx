@@ -26,7 +26,7 @@ export const ContactUs = () => {
   const sendEmail = (e) => {
     e.preventDefault();
     setDisable(d => !d);
-    emailjs.sendForm(import.meta.env.VITE_SERVICE_ID, import.meta.env.VITE_TEMPLATE_ID, form.current, 'HS91SoID9eOvXD1Kq')
+    emailjs.sendForm(import.meta.env.VITE_SERVICE_ID, import.meta.env.VITE_TEMPLATE_ID, form.current, import.meta.env.VITE_PUBLIC_API)
       .then((result) => {
         toast.success(result.text + ' Successfully sent');
         navigate('/dashboard');
