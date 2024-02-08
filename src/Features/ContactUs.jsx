@@ -67,7 +67,7 @@ export const ContactUs = () => {
         </div>
 
         <div className=" grid gap-4 ">
-          <label htmlFor="description">Ticket ID</label>
+          <label htmlFor="description">Description</label>
           <input value={description} type="text" id='description' name='description' className=' border-b border-neutral-900 disabled:text-neutral-500 disabled:cursor-not-allowed  duration-500 transition-all focus:border-b-2 outline-none py-2 focus:border-orange-500' placeholder="Sender's country" />
         </div>
 

@@ -47,7 +47,7 @@ const ProgressBar = ({ startDateAndTime }) => {
           {percentage > 22.3 && percentage < 24.4 && '🚗'}
           {percentage > 24.4 && percentage < 74.4 && '📦'}
           {percentage > 74.4 && percentage < 82.6 && '✈'}
-          {percentage > 82.6 && percentage < 92.3 && '📜'} </span>
+          {percentage > 82.6 && percentage < 92.3 && '🚗'} </span>
       </div>
 
       <p>Progress: {percentage < 0 ? 'In progress' : percentage.toFixed(1) + '%'}</p>
@@ -60,9 +60,9 @@ const ProgressBar = ({ startDateAndTime }) => {
 
       {percentage > 74.4 && percentage < 82.6 && <p>Status: {percentage > 74.4 && percentage < 82.6 && 'Shipping'}</p>}
 
-      {percentage > 82.6 && percentage < 92.3 && <p>Status: {percentage > 82.6 && percentage < 92.3 && 'Custom clearance'}</p>}
+      {percentage > 82.6 && percentage < 92.3 && <p>Status: {percentage > 82.6 && percentage < 92.3 && 'Arrived at airport'}</p>}
 
-      {percentage > 92.3 && percentage < 100 && <p>Status: {percentage > 92.3 && percentage < 100 && 'On hold'}</p>}
+      {percentage > 92.3 && percentage < 100 && <p>Status: {percentage > 92.3 && percentage < 100 && 'Delivering to destination'}</p>}
 
       {/* <div className="grid gap-4">
     <label htmlFor="date">Set start date and date: </label>
