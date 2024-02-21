@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react';
 import { differenceInMilliseconds, parseISO } from 'date-fns';
 
+
+const date = new Date;
 const Progress = ({ receiveDate, deliveryDate }) => {
   const startDate = parseISO(receiveDate); // Replace with your start date
   const endDate = parseISO(deliveryDate); // Replace with your end date
@@ -35,7 +37,7 @@ const Progress = ({ receiveDate, deliveryDate }) => {
         <div
           className='  bg-orange-500 h-5 rounded-full'
           style={{
-            width: `${percentage}%`,
+            width: { percentage },
           }}
         ></div>
 
@@ -43,7 +45,10 @@ const Progress = ({ receiveDate, deliveryDate }) => {
           {percentage > 22.3 && percentage < 24.4 && '🚗'}
           {percentage > 24.4 && percentage < 74.4 && '📦'}
           {percentage > 74.4 && percentage < 82.6 && '✈'}
-          {percentage > 82.6 && percentage < 92.3 && '🚗'} </span>
+          {percentage > 82.6 && percentage < 92.3 && '🚗'}
+          {percentage === 100 && date.getDate > deliveryDate && 'Delivered'}
+
+        </span>
       </div>
 
       <p>Progress: {percent < 0 ? 'In progress' : percent + '%'}</p>
@@ -59,6 +64,8 @@ const Progress = ({ receiveDate, deliveryDate }) => {
       {percentage > 82.6 && percentage < 92.3 && <p>Status: {percentage > 82.6 && percentage < 92.3 && 'Arrived at airport'}</p>}
 
       {percentage > 92.3 && percentage < 100 && <p>Status: {percentage > 92.3 && percentage < 100 && 'Delivering to destination'}</p>}
+
+      {deliveryDate < date.getDate && <p> Status: Delivered</p>}
     </div >
   );
 };
