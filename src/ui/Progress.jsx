@@ -53,17 +53,17 @@ const Progress = ({ receiveDate, deliveryDate }) => {
 
       <p>Progress: {percent < 0 ? 'In progress' : percent + '%'}</p>
 
-      {percentage < 22.3 && <p>Status: {percentage < 22.3 && 'Packaging and loading'}</p>}
+      {percentage < 22.3 && date.getDate < deliveryDate && <p>Status: {percentage < 22.3 && 'Packaging and loading'}</p>}
 
-      {percentage > 22.3 && percentage < 24.4 && <p>Status: {percentage > 22.3 && percentage < 24.4 && 'Driving to warehouse'}</p>}
+      {percentage > 22.3 && percentage < 24.4 && date.getDate < deliveryDate && <p>Status: {percentage > 22.3 && percentage < 24.4 && 'Driving to warehouse'}</p>}
 
-      {percentage > 24.4 && percentage < 74.4 && <p>Status: {percentage > 24.4 && percentage < 74.4 && 'Loading & sorting'}</p>}
+      {percentage > 24.4 && percentage < 74.4 && date.getDate < deliveryDate && <p>Status: {percentage > 24.4 && percentage < 74.4 && 'Loading & sorting'}</p>}
 
-      {percentage > 74.4 && percentage < 82.6 && <p>Status: {percentage > 74.4 && percentage < 82.6 && 'Shipping'}</p>}
+      {percentage > 74.4 && percentage < 82.6 && date.getDate < deliveryDate && <p>Status: {percentage > 74.4 && percentage < 82.6 && 'Shipping'}</p>}
 
-      {percentage > 82.6 && percentage < 92.3 && <p>Status: {percentage > 82.6 && percentage < 92.3 && 'Arrived at airport'}</p>}
+      {percentage > 82.6 && percentage < 92.3 && date.getDate < deliveryDate && <p>Status: {percentage > 82.6 && percentage < 92.3 && 'Arrived at airport'}</p>}
 
-      {percentage > 92.3 && percentage < 100 && <p>Status: {percentage > 92.3 && percentage < 100 && 'Delivering to destination'}</p>}
+      {percentage > 92.3 && percentage < 100 && date.getDate < deliveryDate && <p>Status: {percentage > 92.3 && percentage < 100 && 'Delivering to destination'}</p>}
 
       {deliveryDate < date.getDate && <p> Status: Delivered</p>}
     </div >
