@@ -37,7 +37,7 @@ const Progress = ({ receiveDate, deliveryDate }) => {
         <div
           className='  bg-orange-500 h-5 rounded-full'
           style={{
-            width: { percentage },
+            width: `${date.getDate > deliveryDate ? 100 : percentage}%`,
           }}
         ></div>
 
