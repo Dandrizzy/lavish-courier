@@ -51,7 +51,7 @@ const Progress = ({ receiveDate, deliveryDate }) => {
         </span>
       </div>
 
-      <p>Progress: {percent < 0 ? 'In progress' : percent + '%'}</p>
+      <p>Progress: {percent < 0 ? 'In progress' : date.getDate > deliveryDate ? percent + '%' : '100%'}</p>
 
       {percentage < 22.3 && date.getDate < deliveryDate && <p>Status: {percentage < 22.3 && 'Packaging and loading'}</p>}
 
