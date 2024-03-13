@@ -20,7 +20,7 @@ const HomeTicket = () => {
 
  if (data?.data === undefined) return <p>Please check your code. 🔍</p>;
 
- const { name, rAddress, rCountry, rEmail, rName, rPhone, sAddress, sCountry, sEmail, sPhone, weight, description, deliveryDate, receiveDate, amount } = data.data;
+ const { name, rAddress, rCountry, rEmail, rName, rPhone, sAddress, sCountry, sEmail, sPhone, weight, description, deliveryDate, receiveDate, amount, location } = data.data;
 
  return (
   <>
@@ -63,7 +63,7 @@ const HomeTicket = () => {
 
     </div>
     <div className="grid gap-4 text-neutral-900 p-4">
-     <Progress receiveDate={receiveDate} deliveryDate={deliveryDate} />
+     <Progress receiveDate={receiveDate} deliveryDate={deliveryDate} location={location} />
 
     </div>
    </div>

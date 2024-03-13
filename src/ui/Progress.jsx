@@ -3,7 +3,8 @@ import { differenceInMilliseconds, parseISO } from 'date-fns';
 
 
 const date = new Date;
-const Progress = ({ receiveDate, deliveryDate }) => {
+const Progress = ({ receiveDate, deliveryDate, location }) => {
+
   const startDate = parseISO(receiveDate); // Replace with your start date
   const endDate = parseISO(deliveryDate); // Replace with your end date
   const maxDuration = differenceInMilliseconds(endDate, startDate) / 1000; // Convert to seconds
@@ -66,6 +67,9 @@ const Progress = ({ receiveDate, deliveryDate }) => {
       {percentage > 92.3 && percentage < 100 && date.getDate < deliveryDate && <p>Status: {percentage > 92.3 && percentage < 100 && 'Delivering to destination'}</p>}
 
       {deliveryDate < date.getDate && <p> Status: Arrived waiting pickup</p>}
+
+      {location !== '' && location !== null && <p>Location: {location}</p>}
+
     </div >
   );
 };

@@ -64,6 +64,7 @@ const ProgressBar = ({ startDateAndTime }) => {
 
       {percentage > 92.3 && percentage < 100 && <p>Status: {percentage > 92.3 && percentage < 100 && 'Delivering to destination'}</p>}
 
+
       {/* <div className="grid gap-4">
     <label htmlFor="date">Set start date and date: </label>
     <input className=" outline-none border-2 p-2" type="datetime-local" value={startDate.toISOString().slice(0, -8)} onChange={e => setStartDate(new Date(e.target.value))} />

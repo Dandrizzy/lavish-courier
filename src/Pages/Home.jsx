@@ -19,7 +19,6 @@ const Home = () => {
 
  useEffect(() => {
   dispatch(addTicket(fetch));
-  console.log(ticket);
  }, [fetch, dispatch, ticket]);
 
  if (isFetching) return <Spinner />;
