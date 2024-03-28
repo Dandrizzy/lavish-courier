@@ -62,7 +62,7 @@ const ProgressBar = ({ startDateAndTime }) => {
 
       {percentage > 82.6 && percentage < 92.3 && <p>Status: {percentage > 82.6 && percentage < 92.3 && 'Arrived at airport'}</p>}
 
-      {percentage > 92.3 && percentage < 100 && <p>Status: {percentage > 92.3 && percentage < 100 && 'Delivering to destination'}</p>}
+      {percentage > 92.3 && percentage < 100 && <p>Status: {percentage > 92.3 && percentage < 100 && 'Delivered'}</p>}
 
 
       {/* <div className="grid gap-4">
