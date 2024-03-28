@@ -66,7 +66,7 @@ const Progress = ({ receiveDate, deliveryDate, location }) => {
 
       {percentage > 92.3 && percentage < 100 && date.getDate < deliveryDate && <p>Status: {percentage > 92.3 && percentage < 100 && 'Delivering to destination'}</p>}
 
-      {deliveryDate < date.getDate && <p> Status: Arrived waiting pickup</p>}
+      {deliveryDate < date.getDate && <p> Status: Delivered</p>}
 
       {location !== '' && location !== null && <p>Location: {location}</p>}
 
